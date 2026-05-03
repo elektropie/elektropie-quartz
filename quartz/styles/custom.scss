@@ -15,7 +15,7 @@ body[data-slug="index"] {
     // Both sidebars
     .sidebar.left,
     .sidebar.right {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.25);
       border-radius: 8px;
       color: #000;
 
@@ -27,38 +27,37 @@ body[data-slug="index"] {
       }
     }
 
-    // Header (title + date above article)
-    .page-header {
-      background: rgba(255, 255, 255, 0.15);
+    // Center column: single continuous background, no gaps
+    .center {
+      background: rgba(255, 255, 255, 0.25);
       border-radius: 8px;
-      padding: 0.75rem 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #000;
-    }
-
-    // Main article: centered within its grid column, pushed to ~60% viewport height
-    article {
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
-      padding: 2rem 2.5rem;
-      max-width: 740px;
-      width: 100%;
-      margin: 60vh auto 1rem;
-      box-sizing: border-box;
       color: #000;
 
       a.active { color: #003399; }
 
-      @media (max-width: 800px) {
-        padding: 1.25rem 1rem;
-        max-width: 100%;
-        margin-top: 50vh;
+      .page-header {
+        padding: 0.75rem 1.5rem;
+        margin-bottom: 0;
+      }
+
+      article {
+        padding: 2rem 2.5rem;
+        max-width: 740px;
+        width: 100%;
+        margin: 60vh auto 1rem;
+        box-sizing: border-box;
+
+        @media (max-width: 800px) {
+          padding: 1.25rem 1rem;
+          max-width: 100%;
+          margin-top: 50vh;
+        }
       }
     }
 
     // Footer
     footer {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.25);
       border-radius: 8px;
       padding: 1rem 1.5rem;
       color: #000;
