@@ -1,10 +1,10 @@
 ---
-title: Elektropie
+title: Prototyp (#260503)
 ---
 
-# Elektropie — znalostní báze
+# Znalostní báze
 
-Vítej. Toto je veřejná část znalostní báze projektu [elektrika.ai](https://lab.elektrika.ai).
+Toto je testovací část znalostní báze projektu [elektrika.ai](https://lab.elektrika.ai). Obsah je k testování!
 
 ## Co tu najdeš
 - [[builders_vs_coders|Builders vs Coders]] — kdo přežije nástup AI
@@ -14,4 +14,4 @@ Vítej. Toto je veřejná část znalostní báze projektu [elektrika.ai](https:
 
 ## O projektu
 Zápisky vznikají z přepisů rozhovorů, článků a poznámek metodou druhého mozku.
-Každý zápisek je autonomní znalost — dává smysl i bez originálu.
+Každý zápisek je autonomní znalost, dává smysl i bez originálu.

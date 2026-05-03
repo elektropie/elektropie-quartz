@@ -1,7 +1,7 @@
 # Poznámky z ČSN EN IEC 62305-1 ed. 3 — Ochrana před bleskem, Část 1: Obecné principy
 
-> Zpracováno pro osobní studium. Parafrázovaný obsah — není kopií originálu.
-> Zdroj: ČSN EN IEC 62305-1 ed. 3, Česká agentura pro standardizaci, vydání 2025, idt IEC 62305-1:2024.
+> POZOR! Jde o poznámky pro osobní studium. Parafrázovaný obsah, nejde o kopií originálu. Ověř proti originální ČSN! 
+> ČSN EN IEC 62305-1 ed. 3, Česká agentura pro standardizaci, vydání 2025, idt IEC 62305-1:2024.
 > Nahrazuje ČSN EN 62305-1 ed. 2 ze září 2011. Souběžná platnost do **2027-10-31**.
 
 ---
