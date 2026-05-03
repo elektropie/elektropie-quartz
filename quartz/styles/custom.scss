@@ -1,3 +1,58 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Index page: fixed background image with 10% white overlay
+body[data-slug="index"] {
+  background-color: transparent;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("/static/26-bg-ektropie.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  #quartz-body {
+    // Both sidebars
+    .sidebar.left,
+    .sidebar.right {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+
+      @media (max-width: 800px) {
+        border-radius: 0;
+      }
+    }
+
+    // Header (title + date above article)
+    .page-header {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    // Main article: centered within its grid column, pushed to ~60% viewport height
+    article {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      padding: 2rem 2.5rem;
+      max-width: 740px;
+      width: 100%;
+      margin: 60vh auto 0;
+      box-sizing: border-box;
+
+      @media (max-width: 800px) {
+        padding: 1.25rem 1rem;
+        max-width: 100%;
+        margin-top: 50vh;
+      }
+    }
+
+    // Footer
+    footer {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+    }
+  }
+}
