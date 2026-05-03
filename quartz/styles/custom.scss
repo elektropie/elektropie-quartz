@@ -15,7 +15,7 @@ body[data-slug="index"] {
     // Both sidebars
     .sidebar.left,
     .sidebar.right {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.20);
       border-radius: 8px;
       color: #000;
 
@@ -29,7 +29,7 @@ body[data-slug="index"] {
 
     // Center column: single continuous background, no gaps
     .center {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.20);
       border-radius: 8px;
       color: #000;
 
@@ -37,7 +37,7 @@ body[data-slug="index"] {
 
       .page-header {
         padding: 0.75rem 1.5rem;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
       }
 
       article {
@@ -57,7 +57,7 @@ body[data-slug="index"] {
 
     // Footer
     footer {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.20);
       border-radius: 8px;
       padding: 1rem 1.5rem;
       color: #000;
