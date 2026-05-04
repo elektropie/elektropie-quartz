@@ -25,7 +25,8 @@ async function processContent(
 ) {
   const slug = fileData.slug!
   const cfg = ctx.cfg.configuration
-  const externalResources = pageResources(pathToRoot(slug), resources)
+  const outputSlug = (slug === "index" ? slug : `${slug}/index`) as FullSlug
+  const externalResources = pageResources(pathToRoot(outputSlug), resources)
   const componentData: QuartzComponentProps = {
     ctx,
     fileData,
@@ -37,7 +38,6 @@ async function processContent(
   }
 
   const content = renderPage(cfg, slug, componentData, opts, externalResources)
-  const outputSlug = (slug === "index" ? slug : `${slug}/index`) as FullSlug
   return write({
     ctx,
     content,
