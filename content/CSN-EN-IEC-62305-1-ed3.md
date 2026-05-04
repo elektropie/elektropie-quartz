@@ -730,7 +730,7 @@ Proud se šíří z místa úderu oběma směry vedení. Hodnoty I'F závisejí 
 ## Křížové odkazy
 
 - [[ČSN EN IEC 62305-2]] — Ochrana před bleskem, Část 2: Management rizik
-- [[ČSN EN 62305-3 ed. 2]] — Ochrana před bleskem, Část 3: Hmotné škody na stavbách
+- [[CSN-EN-62305-3-ed2|ČSN EN 62305-3 ed. 2]] — Ochrana před bleskem, Část 3: Hmotné škody na stavbách
 - [[ČSN EN IEC 62305-4]] — Ochrana před bleskem, Část 4: Elektrické a elektronické systémy ve stavbách
 - [[EN IEC 62561]] — Součásti systému ochrany před bleskem (LPSC)
 - [[EN IEC 62793]] — Výstražné systémy před bouřkou (TWS)

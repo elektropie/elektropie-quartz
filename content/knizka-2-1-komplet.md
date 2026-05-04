@@ -616,7 +616,7 @@ Jímače (hroty tyčí) musí být mimo zóny 0 a 1; výjimečně v zóně 2. So
 
 - [[ČSN EN 62305]] — hlavní norma citovaná ve všech článcích
 - [[ČSN EN 62305-2]] — řízení rizika, stanovení LPL
-- [[ČSN EN 62305-3]] — hmotné škody na stavbách, skryté svody, zóny Ex
+- [[CSN-EN-62305-3-ed2|ČSN EN 62305-3]] — hmotné škody na stavbách, skryté svody, zóny Ex
 - [[ČSN 34 1390]] — stará norma (zrušena 2006), stále zmiňována v kontextu rekonstrukcí
 - [[PNE 33 0000-5]] — zapojení svodičů před elektroměrem
 - [[ČSN EN 50164-1]] — součásti ochrany před bleskem, spojovací součásti
