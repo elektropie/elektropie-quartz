@@ -2,6 +2,12 @@ import { FileTrieNode } from "../../util/fileTrie"
 import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
 
+function resolveAbsolute(target: FullSlug | string): string {
+  const pathPrefix = (document.body.dataset.pathprefix ?? "").replace(/\/$/, "")
+  const simple = simplifySlug(target as FullSlug)
+  return simple === "/" ? `${pathPrefix}/` : `${pathPrefix}/${simple}`
+}
+
 type MaybeHTMLElement = HTMLElement | undefined
 
 interface ParsedOptions {
@@ -84,7 +90,7 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   const clone = template.content.cloneNode(true) as DocumentFragment
   const li = clone.querySelector("li") as HTMLLIElement
   const a = li.querySelector("a") as HTMLAnchorElement
-  a.href = resolveRelative(currentSlug, node.slug)
+  a.href = resolveAbsolute(node.slug)
   a.dataset.for = node.slug
   a.textContent = node.displayName
 
@@ -119,7 +125,7 @@ function createFolderNode(
     // Replace button with link for link behavior
     const button = titleContainer.querySelector(".folder-button") as HTMLElement
     const a = document.createElement("a")
-    a.href = resolveRelative(currentSlug, folderPath)
+    a.href = resolveAbsolute(folderPath)
     a.dataset.for = folderPath
     a.className = "folder-title"
     a.textContent = node.displayName

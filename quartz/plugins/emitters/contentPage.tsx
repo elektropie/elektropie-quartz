@@ -12,6 +12,8 @@ import { styleText } from "util"
 import { write } from "./helpers"
 import { BuildCtx } from "../../util/ctx"
 import { Node } from "unist"
+import { visit } from "unist-util-visit"
+import { Element } from "hast"
 import { StaticResources } from "../../util/resources"
 import { QuartzPluginData } from "../vfile"
 
@@ -26,10 +28,27 @@ async function processContent(
   const slug = fileData.slug!
   const cfg = ctx.cfg.configuration
   const outputSlug = (slug === "index" ? slug : `${slug}/index`) as FullSlug
+
+  // Inline links in the HAST tree were resolved by transformers using the original slug
+  // (flat path). Now that the file lives at slug/index.html, rewrite ./X → ../X.
+  if (outputSlug !== slug) {
+    visit(tree as Node & { type: string }, "element", (node: Element) => {
+      for (const attr of ["href", "src"] as const) {
+        const val = node.properties?.[attr]
+        if (typeof val === "string" && val.startsWith("./")) {
+          node.properties![attr] = "../" + val.slice(2)
+        }
+      }
+    })
+  }
+
   const externalResources = pageResources(pathToRoot(outputSlug), resources)
+  // Components use fileData.slug for resolveRelative() — give them outputSlug so
+  // relative links are computed from the actual file location (slug/index.html).
+  const fileDataForRender = { ...fileData, slug: outputSlug }
   const componentData: QuartzComponentProps = {
     ctx,
-    fileData,
+    fileData: fileDataForRender,
     externalResources,
     cfg,
     children: [],
@@ -37,6 +56,7 @@ async function processContent(
     allFiles,
   }
 
+  // renderPage's second arg sets data-slug on <body> — keep original slug for SPA routing.
   const content = renderPage(cfg, slug, componentData, opts, externalResources)
   return write({
     ctx,

@@ -27,8 +27,7 @@ export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
 ): StaticResources {
-  const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
-  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
+  const contentIndexScript = `const fetchData = fetch((document.body.dataset.pathprefix || "") + "/static/contentIndex.json").then(data => data.json())`
 
   const resources: StaticResources = {
     css: [
@@ -262,7 +261,7 @@ export function renderPage(
   const doc = (
     <html lang={lang} dir={direction}>
       <Head {...componentData} />
-      <body data-slug={slug}>
+      <body data-slug={slug} data-pathprefix={cfg.pathPrefix ?? ""}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
