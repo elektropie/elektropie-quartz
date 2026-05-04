@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx quartz *)",
+      "Bash(git config *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "WebFetch(domain:elektropie.elektrika.ai)",
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add quartz/static/bg-clouds.jpg)",
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz commit -m ' *)",
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz push)",
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add quartz/styles/custom.scss)",
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add -A content/)"
+    ]
+  }
+}
