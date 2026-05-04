@@ -26,8 +26,12 @@ const headerRegex = new RegExp(/h[1-6]/)
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
+  pathPrefix?: string,
 ): StaticResources {
-  const contentIndexScript = `const fetchData = fetch((document.body.dataset.pathprefix || "") + "/static/contentIndex.json").then(data => data.json())`
+  const contentIndexPath = pathPrefix
+    ? `/${pathPrefix.replace(/^\/|\/$/g, "")}/static/contentIndex.json`
+    : joinSegments(baseDir, "static/contentIndex.json")
+  const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
   const resources: StaticResources = {
     css: [

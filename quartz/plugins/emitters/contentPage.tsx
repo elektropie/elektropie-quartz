@@ -42,7 +42,7 @@ async function processContent(
     })
   }
 
-  const externalResources = pageResources(pathToRoot(outputSlug), resources)
+  const externalResources = pageResources(pathToRoot(outputSlug), resources, cfg.pathPrefix)
   // Components use fileData.slug for resolveRelative() — give them outputSlug so
   // relative links are computed from the actual file location (slug/index.html).
   const fileDataForRender = { ...fileData, slug: outputSlug }
