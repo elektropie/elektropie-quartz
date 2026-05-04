@@ -5,7 +5,7 @@ import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
-import { pathToRoot } from "../../util/path"
+import { FullSlug, pathToRoot } from "../../util/path"
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { Content } from "../../components"
 import { styleText } from "util"
@@ -37,10 +37,11 @@ async function processContent(
   }
 
   const content = renderPage(cfg, slug, componentData, opts, externalResources)
+  const outputSlug = (slug === "index" ? slug : `${slug}/index`) as FullSlug
   return write({
     ctx,
     content,
-    slug,
+    slug: outputSlug,
     ext: ".html",
   })
 }

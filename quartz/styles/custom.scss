@@ -5,9 +5,9 @@ body[data-slug="index"] {
   background-color: transparent;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-    url("/static/bg-clouds.jpg");
+    url("/elektropie/static/bg-clouds.jpg");
   background-size: cover;
-  background-position: center top;
+  background-position: left top;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
@@ -50,7 +50,7 @@ body[data-slug="index"] {
         @media (max-width: 800px) {
           padding: 1.25rem 1rem;
           max-width: 100%;
-          margin-top: 50vh;
+          margin-top: 0;
         }
       }
     }

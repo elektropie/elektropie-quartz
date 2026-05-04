@@ -16,7 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "cs-CZ",
-    baseUrl: "elektropie.elektrika.ai",
+    baseUrl: "lab.elektrika.ai",
+    pathPrefix: "/elektropie",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
