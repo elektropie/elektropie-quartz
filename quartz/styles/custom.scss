@@ -1,7 +1,7 @@
 @use "./base.scss";
 
-// Index page: fixed background image with 10% white overlay
-body[data-slug="index"] {
+// All pages: fixed background image with 10% white overlay
+body {
   background-color: transparent;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
