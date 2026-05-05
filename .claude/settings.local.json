@@ -14,7 +14,11 @@
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add -A content/)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\([k for k in d.keys\\(\\) if 'CSN-33' in k]\\)\")",
       "Bash(python3 -c ' *)",
-      "Bash(claude auto-mode *)"
+      "Bash(claude auto-mode *)",
+      "Bash(grep -o 'html,body{[^}]*}\\\\|html,\\\\s*body\\\\s*{[^}]*}' /mnt/c/Users/Mirek/elektropie-quartz/public/index.css)",
+      "Bash(grep -bo 'width:100vw\\\\|html,body{width:100%' /mnt/c/Users/Mirek/elektropie-quartz/public/index.css)",
+      "Bash(grep *)",
+      "Bash(dd if=/mnt/c/Users/Mirek/elektropie-quartz/public/index.css bs=1 skip=35000 count=200)"
     ]
   }
 }
