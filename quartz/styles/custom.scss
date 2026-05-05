@@ -14,19 +14,32 @@ body {
   overflow-x: hidden;
 }
 
-// clip (unlike hidden) does not create a scroll container — position:sticky
-// and position:fixed children are unaffected, but inline overflow is clipped.
 @media (max-width: 800px) {
+  // The left sidebar is a flex row whose items (PageTitle + Search + Darkmode
+  // + ReaderMode + FontSize + Explorer) exceed the grid column width (~358px
+  // on 390px iPhone), causing the auto grid track to expand and the page to
+  // overflow by ~10–16px.
+  // min-width:0 prevents the grid item from inflating the auto column.
+  // overflow-x clips the flex overflow without creating a scroll container
+  // (clip vs hidden), so position:sticky on the sidebar still works.
+  .sidebar.left {
+    min-width: 0;
+    overflow-x: hidden; // fallback for Safari <15.4
+    overflow-x: clip;
+  }
+
+  // Belt-and-suspenders: also clip at the grid and page level.
   .page {
     overflow-x: clip;
   }
 
   .page > #quartz-body {
+    min-width: 0;
     overflow-x: clip;
   }
 
-  // .explorer-content is position:absolute inside a padded container, so
-  // width:100vw exceeds the viewport. position:fixed anchors it to viewport.
+  // .explorer-content is position:absolute inside a padded container — fix
+  // to position:fixed so width:100vw is relative to viewport, not parent.
   .explorer .explorer-content {
     position: fixed !important;
   }
