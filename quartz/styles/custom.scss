@@ -15,6 +15,15 @@ body {
   overflow-x: hidden;
 }
 
+// On mobile, .explorer-content is position:absolute inside a container with
+// padding:0 1rem, so width:100vw overflows by 1rem. Fix: use position:fixed
+// so it's always relative to the viewport, not the padded parent.
+@media (max-width: 800px) {
+  .explorer .explorer-content {
+    position: fixed !important;
+  }
+}
+
 // All pages: fixed background image with 10% white overlay
 body {
   background-color: transparent;
