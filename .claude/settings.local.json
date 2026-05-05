@@ -13,7 +13,8 @@
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add quartz/styles/custom.scss)",
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add -A content/)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\([k for k in d.keys\\(\\) if 'CSN-33' in k]\\)\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(claude auto-mode *)"
     ]
   }
 }

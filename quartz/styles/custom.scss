@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+// iOS Safari ignores overflow-x: hidden on html — must also set on body
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 // All pages: fixed background image with 10% white overlay
 body {
   background-color: transparent;
