@@ -6,12 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
-  }),
+  footer: Component.Footer(),
 }
 
 // components for pages that display a single page (e.g. a single note)
@@ -36,12 +31,16 @@ export const defaultContentPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
+        { Component: Component.FontSize() },
       ],
     }),
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: { repelForce: 2.0, linkDistance: 60 },
+      globalGraph: { repelForce: 2.0, linkDistance: 60 },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -60,9 +59,16 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
+        { Component: Component.FontSize() },
       ],
     }),
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.Graph({
+      localGraph: { repelForce: 2.0, linkDistance: 60 },
+      globalGraph: { repelForce: 2.0, linkDistance: 60 },
+    }),
+    Component.Backlinks(),
+  ],
 }

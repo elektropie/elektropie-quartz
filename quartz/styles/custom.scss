@@ -15,7 +15,7 @@ body {
     // Both sidebars
     .sidebar.left,
     .sidebar.right {
-      background: rgba(255, 255, 255, 0.20) !important;
+      background: rgba(255, 255, 255, 0.85) !important;
       border-radius: 8px;
       color: #000 !important;
 
@@ -29,7 +29,7 @@ body {
 
     // Center column: single continuous background, no gaps
     .center {
-      background: rgba(255, 255, 255, 0.20) !important;
+      background: rgba(255, 255, 255, 0.85) !important;
       border-radius: 8px;
       color: #000 !important;
 
@@ -57,12 +57,12 @@ body {
 
     // Graph: solid background so light-colored nodes/edges are visible
     .sidebar.right .graph .graph-outer {
-      background-color: var(--light) !important;
+      background-color: rgba(255, 255, 255, 0.5) !important;
     }
 
     // Footer
     footer {
-      background: rgba(255, 255, 255, 0.20) !important;
+      background: rgba(255, 255, 255, 0.85) !important;
       border-radius: 8px;
       padding: 1rem 1.5rem;
       color: #000 !important;

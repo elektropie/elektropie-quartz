@@ -11,7 +11,9 @@
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz commit -m ' *)",
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz push)",
       "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add quartz/styles/custom.scss)",
-      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add -A content/)"
+      "Bash(git -C /mnt/c/Users/Mirek/elektropie-quartz add -A content/)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\([k for k in d.keys\\(\\) if 'CSN-33' in k]\\)\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

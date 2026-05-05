@@ -37,7 +37,7 @@ title: "ČSN 33 2000-4-41 — Přehled vzorců a křížové odkazy"
 ## Viz také v Elektropie
 
 - [[CSN-33-2000-4-41-ed3|Obsah ČSN 33 2000-4-41 ed. 3]]
-- [[knizka-2-1-komplet|Knižka 2.1 — Ochrana před bleskem]]
+- [[knizka-2-1|Knižka 2.1 — Ochrana před bleskem]]
 - [[CSN-EN-IEC-62305-1-ed3|ČSN EN IEC 62305-1 ed. 3 — Ochrana před bleskem]]
 - [[CSN-EN-62305-3-ed2|ČSN EN 62305-3 ed. 2 — Fyzická ochrana staveb]]
 
