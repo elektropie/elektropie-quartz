@@ -1,5 +1,12 @@
 @use "./base.scss";
 
+*,
+*::before,
+*::after {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 // All pages: fixed background image with 10% white overlay
 body {
   background-color: transparent;
