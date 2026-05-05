@@ -101,3 +101,41 @@ body {
     }
   }
 }
+
+// Random quote widget
+.random-quote-inner {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--secondary);
+  background: rgba(0, 51, 153, 0.04);
+  border-radius: 0 8px 8px 0;
+
+  .random-quote-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin: 0 0 0.75rem 0;
+  }
+
+  .random-quote-text {
+    border-left: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+    font-style: italic;
+    color: var(--darkgray);
+    line-height: 1.6;
+  }
+
+  .random-quote-source {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin: 0;
+
+    a {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+  }
+}

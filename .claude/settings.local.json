@@ -18,7 +18,8 @@
       "Bash(grep -o 'html,body{[^}]*}\\\\|html,\\\\s*body\\\\s*{[^}]*}' /mnt/c/Users/Mirek/elektropie-quartz/public/index.css)",
       "Bash(grep -bo 'width:100vw\\\\|html,body{width:100%' /mnt/c/Users/Mirek/elektropie-quartz/public/index.css)",
       "Bash(grep *)",
-      "Bash(dd if=/mnt/c/Users/Mirek/elektropie-quartz/public/index.css bs=1 skip=35000 count=200)"
+      "Bash(dd if=/mnt/c/Users/Mirek/elektropie-quartz/public/index.css bs=1 skip=35000 count=200)",
+      "Bash(python3 -m json.tool)"
     ]
   }
 }
