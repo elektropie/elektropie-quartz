@@ -7,11 +7,12 @@
   box-sizing: border-box;
 }
 
-// iOS Safari ignores overflow-x: hidden on html — must also set on body
+// base.scss sets html { width: 100vw } which causes overflow on iOS Safari
+// 100% = viewport width without scrollbar feedback loop
 html,
 body {
+  width: 100%;
   overflow-x: hidden;
-  max-width: calc(100vw - 5px);
 }
 
 // All pages: fixed background image with 10% white overlay
