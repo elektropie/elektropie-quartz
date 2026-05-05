@@ -64,6 +64,11 @@
       transform: translate(-50%, -50%);
       height: 80vh;
       width: 80vw;
+      touch-action: none;
+
+      canvas {
+        touch-action: none;
+      }
 
       @media all and not ($desktop) {
         width: 90vw;

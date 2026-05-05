@@ -39,7 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph({
       localGraph: { repelForce: 2.0, linkDistance: 60 },
-      globalGraph: { repelForce: 2.0, linkDistance: 60 },
+      globalGraph: { repelForce: 3.0, linkDistance: 80, fontSize: 0.8 },
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -67,7 +67,7 @@ export const defaultListPageLayout: PageLayout = {
   right: [
     Component.Graph({
       localGraph: { repelForce: 2.0, linkDistance: 60 },
-      globalGraph: { repelForce: 2.0, linkDistance: 60 },
+      globalGraph: { repelForce: 3.0, linkDistance: 80, fontSize: 0.8 },
     }),
     Component.Backlinks(),
   ],
