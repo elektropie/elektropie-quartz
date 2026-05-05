@@ -6,7 +6,11 @@ function pickSentence(content: string): string {
     .split("\n")
     .map((l) => l.trim())
     .filter((l) => l.length > 40 && !l.startsWith("#") && !l.startsWith("-") && !l.startsWith(">"))
-  const line = lines[0] ?? content.trim()
+  if (lines.length === 0) return content.trim().slice(0, 220)
+  // Skip the first few lines (usually headings/intro) and pick randomly from the rest
+  const offset = Math.min(3, Math.floor(lines.length / 2))
+  const pool = lines.length > offset ? lines.slice(offset) : lines
+  const line = pool[Math.floor(Math.random() * pool.length)]
   return line.length > 220 ? line.slice(0, 220) + "…" : line
 }
 
