@@ -6,7 +6,7 @@ import { i18n } from "../i18n"
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
-  const logoPath = "/elektropie/static/elektropie-logo.png"
+  const logoPath = `${baseDir}/static/elektropie-logo.png`
   return (
     <div class={classNames(displayClass, "page-title-wrapper")}>
       <a href={baseDir}>

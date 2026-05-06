@@ -190,6 +190,16 @@ function createRouter() {
 createRouter()
 notifyNav(getFullSlug(window))
 
+// Quartz generates relative links using file-path semantics (no trailing slash).
+// When a page is accessed directly, the server serves it as a directory (trailing slash),
+// which causes "../foo" to resolve one level too deep. Strip the trailing slash so that
+// relative links resolve correctly on initial load, matching SPA-navigation behaviour.
+const _initUrl = new URL(window.location.href)
+if (_initUrl.pathname.endsWith("/") && _initUrl.pathname.length > 1) {
+  _initUrl.pathname = _initUrl.pathname.slice(0, -1)
+}
+normalizeRelativeURLs(document, _initUrl)
+
 if (!customElements.get("route-announcer")) {
   const attrs = {
     "aria-live": "assertive",
